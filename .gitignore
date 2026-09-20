@@ -15,7 +15,5 @@ __pycache__/
 .env
 .env.local
 
-# OS Specific
-Thumbs.db
-Desktop.ini
-.DS_Store
+# IDE / Editor
+.vscode/
