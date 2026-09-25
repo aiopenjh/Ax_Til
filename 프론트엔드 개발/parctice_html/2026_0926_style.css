@@ -1,0 +1,15 @@
+#unique-item {
+    color: purple;
+}
+
+/* 1순위: ID 선택자 (가중치 점수: 100점) */
+.group-item {
+    color: orange;
+}
+
+/* 2순위: 클래스 선택자 (가중치 점수: 10점) */
+p {
+    color: gray;
+}
+
+/* 3순위: 태그 선택자 (가중치 점수: 1점) */
