@@ -13,3 +13,140 @@ p {
 }
 
 /* 3순위: 태그 선택자 (가중치 점수: 1점) */
+
+.box-content {
+    box-sizing: content-box;
+    /* 기본 크기 계산법 적용 */
+    width: 200px;
+    /* 가로 크기 지정 */
+    padding: 20px;
+    /* 안쪽 여백 설정 */
+    border: 5px solid red;
+    /* 빨간색 테두리 설정 */
+    margin-bottom: 20px;
+    /* 아래쪽 상자와의 간격 설정 */
+    background-color: pink;
+    /* 배경색 분홍색 설정 */
+    /* 실제 가로폭 계산: 200px + 40px(패딩 좌우) + 10px(테두리 좌우) = 250px */
+}
+
+.box-border {
+    box-sizing: border-box;
+    /* 테두리 포함 크기 계산법 적용 */
+    width: 200px;
+    /* 가로 크기 지정 */
+    padding: 20px;
+    /* 안쪽 여백 설정 */
+    border: 5px solid blue;
+    /* 파란색 테두리 설정 */
+    background-color: lightblue;
+    /* 배경색 하늘색 설정 */
+    /* 실제 가로폭 계산: 무조건 설정값인 200px */
+}
+
+
+.container {
+    display: inline-block;
+    /* 실습 구역 가로 배치 */
+    margin: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 5px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+/* 첫 번째 컨테이너의 초록 상자 숨기기 */
+.hide-none {
+    display: none;
+    /* 공간을 아예 없애 파란 상자가 위로 올라옴 */
+}
+
+/* 두 번째 컨테이너의 초록 상자 숨기기 */
+.hide-hidden {
+    visibility: hidden;
+    /* 공간은 그대로 두고 투명하게만 만들어 빈 공간이 남음 */
+}
+
+/* style.css */
+
+/* 스크롤 생성을 위한 임시 높이 설정 */
+.scroll-container {
+    height: 1500px;
+    /* 긴 스크롤바가 생기도록 1500px 설정 */
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.scroll-info {
+    margin-top: 50px;
+    color: #666;
+}
+
+/* 1) relative & absolute 연동 배치 */
+.parent {
+    position: relative;
+    /* 자식 요소(absolute)가 자리 잡을 기준점이 됩니다. */
+    width: 250px;
+    height: 300px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.child {
+    position: absolute;
+    /* 기준점(.parent)을 찾아 절대 배치를 시작합니다. */
+    top: 15px;
+    /* 부모의 위쪽 가장자리에서 아래로 15px 이동 */
+    right: 15px;
+    /* 부모의 오른쪽 가장자리에서 왼쪽으로 15px 이동 */
+    background-color: #ff3b30;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* 2) fixed 브라우저 고정 배치 */
+.top-button {
+    position: fixed;
+    /* 부모 요소를 무시하고 브라우저 화면(Viewport) 기준으로 고정합니다. */
+    bottom: 30px;
+    /* 화면 아래쪽에서 위로 30px 띄움 */
+    right: 30px;
+    /* 화면 오른쪽에서 왼쪽으로 30px 띄움 */
+    width: 55px;
+    height: 55px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    line-height: 55px;
+    /* 세로 중앙 정렬 효과 */
+    border-radius: 50%;
+    /* 완벽한 원형으로 깎기 */
+    cursor: pointer;
+    /* 마우스 오버 시 손가락 모양으로 커서 변경 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 은은한 그림자 효과 추가 */
+}
