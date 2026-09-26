@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Template 실습</title>
+    <style>
+        .grid-board {
+            display: grid;
+            /* 왼쪽 첫 번째 세로 칸은 150px로 고정하고, 남은 영역은 1:2 비율로 나누어 가집니다 */
+            grid-template-columns: 150px 1fr 2fr;
+            background-color: #cbd5e1;
+            padding: 15px;
+            gap: 5px;
+        }
+
+        .card {
+            background-color: #3b82f6;
+            color: white;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>지정한 3가지 속성값 비율(150px, 1fr, 2fr)에 맞춰 카드가 자동 배치되었습니다.</h2>
+    <div class="grid-board">
+        <div class="card">150px 칸</div>
+        <div class="card">1fr 칸</div>
+        <div class="card">2fr 칸</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Gap 실습</title>
+    <style>
+        .grid-gap-board {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 가로 줄 간격은 30px, 세로 칸 간격은 10px로 따로따로 정해봅니다 */
+            gap: 30px 10px;
+            background-color: #f1f5f9;
+            padding: 20px;
+        }
+
+        .colored-box {
+            background-color: #ec4899;
+            color: white;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>상하 간격(30px)과 좌우 간격(10px)이 서로 다르게 표현된 격자판입니다.</h2>
+    <div class="grid-gap-board">
+        <div class="colored-box">1</div>
+        <div class="colored-box">2</div>
+        <div class="colored-box">3</div>
+        <div class="colored-box">4</div>
+        <div class="colored-box">5</div>
+        <div class="colored-box">6</div>
+    </div>
+</body>
+
+</html>

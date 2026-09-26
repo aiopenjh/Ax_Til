@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Span 실습</title>
+    <style>
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3칸 격자 틀 */
+            gap: 12px;
+            max-width: 600px;
+        }
+
+        .db-box {
+            background-color: #64748b;
+            color: white;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* 특정 카드만 가로 또는 세로로 넓게 늘립니다 */
+        .hero-box {
+            background-color: #ef4444;
+            /* 빨간색 대표 카드 */
+            grid-column: span 2;
+            /* 가로로 2칸 크기를 가득 차지합니다 */
+        }
+
+        .vertical-box {
+            background-color: #10b981;
+            /* 초록색 세로 카드 */
+            grid-row: span 2;
+            /* 세로로 2칸 높이만큼 아래로 쭉 늘어납니다 */
+            height: 212px;
+            /* 세로 병합 높이에 맞게 맞춰 줍니다 */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>다양한 span 크기 설정을 적용하여 짜여진 비대칭 카드 구조입니다.</h2>
+    <div class="dashboard">
+        <div class="db-box hero-box">인기 게시글 (2칸 차지)</div>
+        <div class="db-box vertical-box">실시간 뉴스 (세로 2칸)</div>
+        <div class="db-box">일반글 1</div>
+        <div class="db-box">일반글 2</div>
+    </div>
+</body>
+
+</html>
