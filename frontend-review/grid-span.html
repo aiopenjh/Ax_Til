@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .practice-area {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 800px;
+            background-color: aquamarine;
+        }
+
+        .card {
+            display: flex;
+            background-color: #64748b;
+            color: white;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .first {
+            grid-column: span 2;
+            background-color: green;
+        }
+
+        .second {
+            grid-row: span 2;
+            background-color: blue;
+            height: 214px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="practice-area">
+        <div class="card first">인기게시글</div>
+        <div class="card second">실시간뉴스</div>
+        <div class="card">그냥글1</div>
+        <div class="card">그냥글2</div>
+    </div>
+
+</body>
+
+</html>
