@@ -1,0 +1,29 @@
+h1 {
+    color: blue;
+    font-size: 20px;
+}
+
+/*h1 글자 css 첫 작성 */
+
+.btn-primary {
+    background-color: blue;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+
+
+li {
+    color: gray;
+}
+
+/*클래스가 아니므로 앞에 .을 안찍고 호출, li에 all 선택자 적용 */
+
+li:nth-of-type(3) {
+    background-color: #fff9db;
+}
+
+/*ul안의li가 3번째 줄 가져올때 인자 선택 */
