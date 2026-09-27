@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>미디어 쿼리 기초 실습</title>
+    <style>
+        /* 1. 기본 스타일 (가로 폭 768px 미만: 모바일 기기 기준 스타일) */
+        body {
+            background-color: #fca5a5;
+            /* 연한 빨간색 */
+            font-family: sans-serif;
+            transition: background-color 0.4s ease;
+            /* 전환 효과 설정 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 모바일 상태용 인쇄 텍스트 정의 */
+        .status-text::after {
+            content: "모바일 화면 (768px 미만)";
+        }
+
+        /* 2. 가로 폭 768px 이상 1023px 이하 (태블릿 장치 기준 스타일) */
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            body {
+                background-color: #6ee7b7;
+                /* 연한 초록색 */
+            }
+
+            .status-text::after {
+                content: "태블릿 화면 (768px ~ 1023px)";
+            }
+        }
+
+        /* 3. 가로 폭 1024px 이상 (데스크톱 모니터 장치 기준 스타일) */
+        @media screen and (min-width: 1024px) {
+            body {
+                background-color: #93c5fd;
+                /* 연한 파란색 */
+            }
+
+            .status-text::after {
+                content: "데스크톱 화면 (1024px 이상)";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="text-align: center; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h1>현재 화면 크기 식별</h1>
+        <h2 class="status-text" style="color: #374151;"></h2>
+    </div>
+</body>
+
+</html>
