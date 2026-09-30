@@ -1,0 +1,54 @@
+//1번 실습문제
+
+<button id="checkButton">브라우저 정보 확인</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const button = document.getElementById("checkButton");
+
+        button.addEventListener("click", function () {
+
+            const language = navigator.language;
+            const width = screen.width;
+
+            alert(`브라우저 언어: ${language}, 화면 너비: ${width}px`);
+        });
+
+    });
+</script>
+
+//2번 실습문제
+<button id="replaceButton">구글로 이동</button>
+
+<script>
+    const button = document.getElementById("replaceButton");
+
+    button.addEventListener("click", function () {
+
+        location.replace("https://www.google.com");
+    });
+</script>
+
+//3번 실습문제
+<div id="alertBox" class="base">클릭하세요</div>
+
+<style>
+    .base {
+        padding: 20px;
+        background-color: lightgray;
+    }
+
+    .emphasize {
+        background-color: yellow;
+        border: 3px solid black;
+    }
+</style>
+
+<script>
+    const alertBox = document.getElementById("alertBox");
+
+    alertBox.addEventListener("click", function () {
+        alertBox.classList.toggle("emphasize");
+    });
+</script>
