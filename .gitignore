@@ -17,3 +17,11 @@ __pycache__/
 
 # IDE / Editor
 .vscode/
+
+node_modules
+.next
+.next/*
+.open-next
+.open-next/*
+.trae
+.trae/*
